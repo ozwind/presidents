@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Presidents</title>
+    <link rel="stylesheet" href="presidents.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="data.js"></script>
+    <script src="presidents.js"></script>
+    <script>
+        $(function() {
+            init();
+            show();
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="leftSide">
+        <h1 id="title"></h1>
+        <table>
+            <tr>
+                <td>Term</td>
+                <td id="term"></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td id="age"></td>
+            </tr>
+            <tr>
+                <td>Party</td>
+                <td id="party"></td>
+            </tr>
+        </table>
+        <p id="info"></p>
+        <a id="wiki">Wiki</a>
+    </div>
+    <div id="rightSide">
+        <img id="photo">
+        <div class="controls">
+            <button id="previous" class="bigfont" type="button">&lt;</button>
+            <select id="select" class="bigfont"></select>
+            <button id="next" class="bigfont" type="button">&gt;</button>
+        </div>
+    </div>
+</body>
+
+</html>

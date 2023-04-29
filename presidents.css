@@ -1,0 +1,30 @@
+body {
+    display: flex;
+}
+
+td {
+    padding: 10px;
+    background-color: rgba(128,128,128,.25);
+}
+
+#leftSide {
+    width: 60%;
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+#rightSide {
+    width: 40%;    
+}
+
+#photo {
+    width: 100%;    
+}
+
+.controls {
+    margin-top: 5px;
+}
+
+#info, td {
+    font-size: x-large;
+}
