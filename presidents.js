@@ -50,8 +50,18 @@ function show() {
     $('#age').text(prez.age);
     $('#party').text(prez.party);
     $('#info').text(prez.info ? prez.info : '');
+    $('#spouse').text(prez.spouse ? prez.spouse : '');
     var wiki = $('#wiki');
     wiki.attr('href', 'https://en.wikipedia.org/wiki/' + prez.name.replaceAll(' ','_'));
+    var media = $('#media');
+    media.removeAttr('href');
+    if (prez.media) {
+        media.show();
+        media.attr('href', prez.media);
+    }
+    else {
+        media.hide();
+    }
     displayPhoto(prez);
 }
 

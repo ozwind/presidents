@@ -25,6 +25,10 @@ td {
     margin-top: 5px;
 }
 
-#info, td {
+#info, #spouse, td {
     font-size: x-large;
+}
+
+#media {
+    padding-left: 15px;
 }
