@@ -49,6 +49,7 @@ function show() {
     var prez = presidents[currentPrez];
     var txt =  prez.name + " (#" + (currentPrez + 1) + ")";
     localStorage.setItem(prezStore, currentPrez);
+    document.title = txt;
     $('#title').text(txt);
     var select = $('#select');
     select.val(prez.name);
