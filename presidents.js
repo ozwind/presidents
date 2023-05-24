@@ -19,6 +19,12 @@ function init() {
         }
     });
 
+    $('#links a').click(function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        var url = $(this).attr('href');
+        window.open(url, '_blank');
+    });
+
     currentPrez = Number(localStorage.getItem(prezStore));
     
     initPicklist();
@@ -51,16 +57,16 @@ function show() {
     $('#party').text(prez.party);
     $('#info').text(prez.info ? prez.info : '');
     $('#spouse').text(prez.spouse ? prez.spouse : '');
-    var wiki = $('#wiki');
-    wiki.attr('href', 'https://en.wikipedia.org/wiki/' + prez.name.replaceAll(' ','_'));
-    var media = $('#media');
-    media.removeAttr('href');
+    var $wiki = $('#wiki');
+    $wiki.attr('href', 'https://en.wikipedia.org/wiki/' + prez.name.replaceAll(' ','_'));
+    var $media = $('#media');
+    $media.removeAttr('href');
     if (prez.media) {
-        media.show();
-        media.attr('href', prez.media);
+        $media.show();
+        $media.attr('href', prez.media);
     }
     else {
-        media.hide();
+        $media.hide();
     }
     displayPhoto(prez);
 }

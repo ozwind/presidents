@@ -23,6 +23,11 @@ td {
 
 .controls {
     margin-top: 5px;
+    display: flex;
+}
+
+.controls * {
+    font-size: 20px;
 }
 
 #info, #spouse, td {
