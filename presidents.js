@@ -28,21 +28,6 @@ function init() {
     currentPrez = Number(localStorage.getItem(prezStore));
     
     initPicklist();
-    preload();
-}
-
-function preload() {
-    var photos = [];
-    for (var idx in presidents) {
-        var prez = presidents[idx];
-        if (prez.photo) {
-            photos.push(prez.photo);
-        }
-    }
-
-    $(photos).each(function(){
-        $('<img/>')[0].src = this;
-    });
 }
 
 function show() {
