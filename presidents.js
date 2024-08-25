@@ -1,3 +1,7 @@
+/**
+ *  https://www.270towin.com/historical-presidential-elections/
+**/
+
 let currentPrez = 0;
 const prezStore = 'prezStore';
 
@@ -55,6 +59,19 @@ function show() {
         $media.hide();
     }
     displayPhoto(prez);
+    displayMaps(prez);
+}
+
+function displayMaps(prez) {
+    let $maps = $('#maps');
+    $maps.empty();
+    if (prez.maps && prez.maps.length > 0) {
+        for (var i = 0; i < prez.maps.length; i++) {
+            let $image = $('<img>');
+            $image.attr('src', prez.maps[i]);
+            $maps.append($image);
+        }
+    }
 }
 
 function displayPhoto(prez) {
@@ -73,6 +90,7 @@ function next() {
     if (currentPrez >= presidents.length) {
         currentPrez = 0;
     }
+console.log(currentPrez);
     show();
 }
 
