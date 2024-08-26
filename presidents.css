@@ -1,5 +1,6 @@
 body {
     display: flex;
+    background-color: black;
 }
 
 td {
@@ -28,10 +29,22 @@ td {
 
 .controls * {
     font-size: 20px;
+    color: antiquewhite;
+    background-color: black;
+    border-color: #333333;
+}
+
+.controls button {
+    border: 1px solid #333333;
 }
 
 #info, #spouse, td {
     font-size: x-large;
+    color: antiquewhite;
+}
+
+h1 {
+    color: antiquewhite;
 }
 
 #media {
@@ -40,4 +53,12 @@ td {
 
 #maps {
     padding-top: 15px;
+}
+
+a {
+  color: #007bff; /* Unclicked color */
+}
+
+a:visited {
+  color: #aa77dd; /* Clicked color */
 }
