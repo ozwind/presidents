@@ -545,7 +545,7 @@ const presidents = [
     info: 'Trump was a businessman and television personality before entering politics, and he was elected as a Republican. During his presidency, he pursued a number of controversial policies, such as a travel ban on several Muslim-majority countries and the separation of migrant families at the border. He also faced several high-profile investigations, including a special counsel investigation into his campaign\'s possible collusion with Russia and an impeachment trial in the House of Representatives and Senate over allegations of abuse of power and obstruction of Congress. Trump\'s foreign policy was marked by his "America First" approach, including a contentious relationship with several NATO allies and the withdrawal of the United States from the Paris Agreement on climate change. He also oversaw a number of domestic policy changes, including a significant overhaul of the tax code and the appointment of several conservative justices to the Supreme Court. Trump\'s presidency was also notable for his use of social media, particularly Twitter, where he frequently made controversial statements and engaged in public feuds with political opponents, journalists, and celebrities.'
 },
 {
-    years: '2021-present',
+    years: '2021-2025',
     name: 'Joe Biden',
     age: 78,
     alive: "1942-",
@@ -555,5 +555,17 @@ const presidents = [
         'https://www.270towin.com/historical-presidential-elections/timeline/margin-of-victory/maps/2020_mov.png'
     ],
     info: 'Prior to Biden\'s presidency, he had an extensive career in politics, serving as a United States Senator from Delaware for 36 years and as Vice President of the United States under President Barack Obama from 2009 to 2017. As President, he has been focused on addressing the COVID-19 pandemic, implementing policies to bolster the economy, and promoting social justice reforms. In his first days in office, he signed a series of executive orders to rejoin the Paris Climate Agreement, end the travel ban on predominantly Muslim countries, and strengthen the Deferred Action for Childhood Arrivals (DACA) program. He has also implemented a $1.9 trillion stimulus package aimed at providing relief to American families and businesses impacted by the pandemic. His administration has also prioritized expanding access to healthcare, proposing initiatives to reduce the cost of prescription drugs and expand access to affordable health insurance. President Biden has also pushed for police reform and social justice, including the George Floyd Justice in Policing Act, which aims to reform law enforcement practices and hold officers accountable for misconduct.'
+},
+{
+    years: '2025-',
+    name: 'Donald Trump',
+    age: 78,
+    alive: "1946-",
+    party: 'Republican',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg',
+    maps: [
+        'https://www.270towin.com/maps/xA2jk.png'
+    ],
+    info: 'Donald Trump secured a historic re-election in 2024, becoming the first U.S. president since Grover Cleveland to win non-consecutive terms, marking a significant moment in American political history. His campaign was characterized by a return to themes of "retribution" and "the final battle," emphasizing a continuation of his previous administration\'s policies but with a more aggressive approach to implementing conservative agendas. Trump\'s promised policies include a significant overhaul of the federal government, aiming to centralize power within the executive branch through Project 2025, which was developed by the Heritage Foundation. This plan seeks to dismantle what Trump refers to as the "administrative state," reclassify civil servants to increase political appointees, and enact a massive deportation program. Additionally, Trump has proposed rolling back environmental regulations, including exiting the Paris Climate Accords, and has pledged to tackle issues like immigration and crime with tougher measures. His re-election signifies a continued push towards conservative policies with an emphasis on reducing government oversight and promoting traditional values.'
 }
 ];

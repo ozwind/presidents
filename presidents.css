@@ -16,7 +16,7 @@ th, td {
 
 p {
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: x-large;
     color: antiquewhite;
 }
@@ -43,7 +43,6 @@ p {
 }
 
 #mainTable th {
-    cursor: pointer;
     font-size: x-large;
     color: antiquewhite;
 }

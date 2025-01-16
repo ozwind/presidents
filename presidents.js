@@ -4,7 +4,7 @@ Author: Cliff Hewitt
 Info:   https://www.270towin.com/historical-presidential-elections/
 
 18-Jul-2024  Inception
-15-Jan-2025  Look and feel redesign
+16-Jan-2025  Look and feel redesign.  Add next president.
 
 */
 
