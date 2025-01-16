@@ -5,7 +5,7 @@
     <!-- https://www.favicon.cc/ -->
     <meta charset="utf-8">
     <title>Presidents</title>
-    <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="icons/usaFlag.ico">
     <link rel="stylesheet" href="presidents.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="data.js" charset="utf-8"></script>
@@ -13,44 +13,20 @@
     <script>
         $(function() {
             init();
-            show();
         });
 
     </script>
 </head>
 
 <body>
-    <div id="leftSide">
-        <h1 id="title"></h1>
-        <table>
-            <tr>
-                <td>Term</td>
-                <td id="term"></td>
-            </tr>
-            <tr>
-                <td>Age</td>
-                <td id="age"></td>
-            </tr>
-            <tr>
-                <td>Party</td>
-                <td id="party"></td>
-            </tr>
-        </table>
-        <p id="info"></p>
-        <p id="spouse"></p>
-        <div id="links">
-            <a id="wiki">Wiki</a>
-            <a id="media">Media</a>
+    <div id="container">
+        <div id="mainTable"></div>
+        <div id="info">
+            <div id="infoTable"></div>
+            <p id="infoText"></p>
+            <div id="images"></div>
         </div>
-        <div id="maps"></div>
-    </div>
-    <div id="rightSide">
-        <img id="photo">
-        <div class="controls">
-            <button id="previous" class="bigfont" type="button">&lt;</button>
-            <select id="select" class="bigfont"></select>
-            <button id="next" class="bigfont" type="button">&gt;</button>
-        </div>
+        <span id="version">15-Jan-2025 &nbsp; &nbsp;C. Hewitt</span>
     </div>
 </body>
 

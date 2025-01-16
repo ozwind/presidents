@@ -3,6 +3,7 @@ const presidents = [
     years: '1789-1797',
     name: 'George Washington',
     age: 57,
+    alive: "1732-1799",
     party: 'None',
     photo:  'https://upload.wikimedia.org/wikipedia/commons/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg',
     maps: [
@@ -15,6 +16,7 @@ const presidents = [
     years: '1797-1801',
     name: 'John Adams',
     age: 61,
+    alive: "1735-1826",
     party: 'Federalist',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/0/07/John_Adams_A18236.jpg',
     maps: [
@@ -26,6 +28,7 @@ const presidents = [
     years: '1801-1809',
     name: 'Thomas Jefferson',
     age: 57,
+    alive: "1743-1826",
     party: 'Democratic-Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Thomas_Jefferson_by_Rembrandt_Peale%2C_1800.jpg',
     maps: [
@@ -38,6 +41,7 @@ const presidents = [
     years: '1809-1817',
     name: 'James Madison',
     age: 57,
+    alive: "1751-1836",
     party: 'Democratic-Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/1/1d/James_Madison.jpg',
     maps: [
@@ -50,6 +54,7 @@ const presidents = [
     years: '1817-1825',
     name: 'James Monroe',
     age: 58,
+    alive: "1758-1831",
     party: 'Democratic-Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/James_Monroe_White_House_portrait_1819.jpg',
     maps: [
@@ -62,6 +67,7 @@ const presidents = [
     years: '1825-1829',
     name: 'John Quincy Adams',
     age: 57,
+    alive: "1767-1848",
     party: 'Democratic-Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/John_Quincy_Adams_by_Charles_Osgood.jpg',
     maps: [
@@ -73,6 +79,7 @@ const presidents = [
     years: '1829-1837',
     name: 'Andrew Jackson',
     age: 61,
+    alive: "1767-1845",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Andrew_jackson_head.jpg',
     maps: [
@@ -85,6 +92,7 @@ const presidents = [
     years: '1837-1841',
     name: 'Martin Van Buren',
     age: 54,
+    alive: "1782-1862",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Martin_Van_Buren.jpg/1024px-Martin_Van_Buren.jpg',
     maps: [
@@ -96,6 +104,7 @@ const presidents = [
     years: '1841',
     name: 'William Henry Harrison',
     age: 68,
+    alive: "1773-1841",
     party: 'Whig',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/3/34/William_Henry_Harrison_by_James_Reid_Lambdin%2C_1835_crop.jpg',
     maps: [
@@ -107,6 +116,7 @@ const presidents = [
     years: '1841-1845',
     name: 'John Tyler',
     age: 51,
+    alive: "1790-1862",
     party: 'Whig',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/1/1d/John_Tyler%2C_Jr.jpg',
     info: 'John Tyler was the tenth President of the United States, succeeding to the presidency after the death of William Henry Harrison. He was the first Vice President to take over the presidency due to the death of a sitting President. Tyler was a states\' rights advocate who opposed many of the policies of the Whig Party, which he had been elected with, and he was eventually expelled from the party. During his presidency, Tyler negotiated a treaty with China, signed a bill establishing the Smithsonian Institution, and vetoed several bills aimed at establishing a national bank. Tyler was also known for his efforts to expand the United States through territorial annexation.'
@@ -115,6 +125,7 @@ const presidents = [
     years: '1845-1849',
     name: 'James K. Polk',
     age: 49,
+    alive: "1795-1849",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/JKP.jpg',
     maps: [
@@ -128,6 +139,7 @@ const presidents = [
     years: '1849-1850',
     name: 'Zachary Taylor',
     age: 64,
+    alive: "1784-1850",
     party: 'Whig',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Zachary_Taylor_restored_and_cropped.jpg',
     maps: [
@@ -139,6 +151,7 @@ const presidents = [
     years: '1850-1853',
     name: 'Millard Fillmore',
     age: 50,
+    alive: "1800-1874",
     party: 'Whig',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Millard_Fillmore_Better_Crop.jpg/1024px-Millard_Fillmore_Better_Crop.jpg',
     info: 'Millard Fillmore was the thirteenth President of the United States, serving in office after the sudden death of his predecessor, Zachary Taylor. As a member of the Whig party, Fillmore supported policies such as infrastructure improvements and reduced tariffs. However, his presidency is perhaps best remembered for his signing of the Compromise of 1850, a set of laws designed to address the issue of slavery in the new territories acquired from Mexico. The Compromise of 1850 included a controversial Fugitive Slave Act, which required citizens to aid in the capture and return of escaped slaves, and which proved deeply unpopular in the North. Fillmore\'s presidency was marked by growing tensions over the issue of slavery, which ultimately led to the outbreak of the Civil War.'
@@ -147,6 +160,7 @@ const presidents = [
     years: '1853-1857',
     name: 'Franklin Pierce',
     age: 48,
+    alive: "1804-1869",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Mathew_Brady_-_Franklin_Pierce_-_alternate_crop.jpg/1024px-Mathew_Brady_-_Franklin_Pierce_-_alternate_crop.jpg',
     maps: [
@@ -158,6 +172,7 @@ const presidents = [
     years: '1857-1861',
     name: 'James Buchanan',
     age: 65,
+    alive: "1791-1868",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/James_Buchanan.jpg',
     maps: [
@@ -169,6 +184,7 @@ const presidents = [
     years: '1861-1865',
     name: 'Abraham Lincoln',
     age: 52,
+    alive: "1809-1865",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg',
     maps: [
@@ -181,6 +197,7 @@ const presidents = [
     years: '1865-1869',
     name: 'Andrew Johnson',
     age: 56,
+    alive: "1808-1875",
     party: 'Democratic/National Union',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Andrew_Johnson_photo_portrait_head_and_shoulders%2C_c1870-1880-Edit1.jpg',
     info: 'Andrew Johnson became president following the assassination of Abraham Lincoln. He was the first president to be impeached by the House of Representatives, but he was acquitted by the Senate. Johnson faced intense opposition from the Republican-controlled Congress due to his lenient policies towards the South during Reconstruction. He vetoed several key Reconstruction bills, which led to a bitter power struggle with Congress. Despite his struggles with Congress, Johnson did manage to purchase Alaska from Russia, which would prove to be a significant expansion of U.S. territory.'
@@ -189,6 +206,7 @@ const presidents = [
     years: '1869-1877',
     name: 'Ulysses S. Grant',
     age: 46,
+    alive: "1822-1885",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/7/75/Ulysses_S_Grant_by_Brady_c1870-restored.jpg',
     maps: [
@@ -201,6 +219,7 @@ const presidents = [
     years: '1877-1881',
     name: 'Rutherford B. Hayes',
     age: 54,
+    alive: "1822-1893",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/5/50/President_Rutherford_Hayes_1870_-_1880_Restored.jpg',
     maps: [
@@ -212,6 +231,7 @@ const presidents = [
     years: '1881',
     name: 'James A. Garfield',
     age: 49,
+    alive: "1831-1881",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/1/1f/James_Abram_Garfield%2C_photo_portrait_seated.jpg',
     maps: [
@@ -223,6 +243,7 @@ const presidents = [
     years: '1881-1885',
     name: 'Chester A. Arthur',
     age: 51,
+    alive: "1829-1886",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/7/79/Chester_Alan_Arthur.jpg',
     info: 'Chester A. Arthur served as the 21st President of the United States. He assumed office after the assassination of President James A. Garfield. Arthur was known for his efforts to reform the civil service system, as he supported the Pendleton Civil Service Reform Act, which aimed to end the spoils system. He also signed into law the Chinese Exclusion Act, which restricted Chinese immigration to the United States. Arthur was known for his love of luxury, which earned him the nickname “The Gentleman Boss”. During his presidency, he was also involved in the construction of the Brooklyn Bridge.'
@@ -231,6 +252,7 @@ const presidents = [
     years: '1885-1889',
     name: 'Grover Cleveland',
     age: 47,
+    alive: "1837-1908",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Grover_Cleveland_-_NARA_-_518139_%28cropped%29.jpg',
     maps: [
@@ -242,6 +264,7 @@ const presidents = [
     years: '1889-1893',
     name: 'Benjamin Harrison',
     age: 55,
+    alive: "1833-1901",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/f/f8/Benjamin_Harrison%2C_head_and_shoulders_bw_photo%2C_1896.jpg',
     maps: [
@@ -253,6 +276,7 @@ const presidents = [
     years: '1893-1897',
     name: 'Grover Cleveland',
     age: 55,
+    alive: "1837-1908",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Grover_Cleveland_-_NARA_-_518139_%28cropped%29.jpg',
     maps: [
@@ -264,6 +288,7 @@ const presidents = [
     years: '1897-1901',
     name: 'William McKinley',
     age: 54,
+    alive: "1843-1901",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Mckinley.jpg',
     maps: [
@@ -276,6 +301,7 @@ const presidents = [
     years: '1901-1909',
     name: 'Theodore Roosevelt',
     age: 42,
+    alive: "1858-1919",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Theodore_Roosevelt_by_the_Pach_Bros.jpg/1024px-Theodore_Roosevelt_by_the_Pach_Bros.jpg',
     maps: [
@@ -287,6 +313,7 @@ const presidents = [
     years: '1909-1913',
     name: 'William Howard Taft',
     age: 51,
+    alive: "1857-1930",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/5/59/William_Howard_Taft_-_Harris_and_Ewing.jpg',
     maps: [
@@ -298,6 +325,7 @@ const presidents = [
     years: '1913-1921',
     name: 'Woodrow Wilson',
     age: 56,
+    alive: "1856-1924",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Thomas_Woodrow_Wilson%2C_Harris_%26_Ewing_bw_photo_portrait%2C_1919.jpg',
     maps: [
@@ -310,6 +338,7 @@ const presidents = [
     years: '1921-1923',
     name: 'Warren G. Harding',
     age: 55,
+    alive: "1865-1923",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/c/c4/Warren_G_Harding-Harris_%26_Ewing.jpg',
     maps: [
@@ -321,6 +350,7 @@ const presidents = [
     years: '1923-1929',
     name: 'Calvin Coolidge',
     age: 51,
+    alive: "1872-1933",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/Calvin_Coolidge_cph.3g10777_%28cropped%29.jpg',
     maps: [
@@ -332,6 +362,7 @@ const presidents = [
     years: '1929-1933',
     name: 'Herbert Hoover',
     age: 54,
+    alive: "1874-1964",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/5/57/President_Hoover_portrait.jpg',
     maps: [
@@ -343,6 +374,7 @@ const presidents = [
     years: '1933-1945',
     name: 'Franklin D. Roosevelt',
     age: 51,
+    alive: "1882-1945",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/4/42/FDR_1944_Color_Portrait.jpg',
     maps: [
@@ -357,6 +389,7 @@ const presidents = [
     years: '1945-1953',
     name: 'Harry S. Truman',
     age: 60,
+    alive: "1884-1972",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/TRUMAN_58-766-06_%28cropped%29.jpg',
     maps: [
@@ -368,6 +401,7 @@ const presidents = [
     years: '1953-1961',
     name: 'Dwight D. Eisenhower',
     age: 62,
+    alive: "1890-1969",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959.jpg',
     maps: [
@@ -380,6 +414,7 @@ const presidents = [
     years: '1961-1963',
     name: 'John F. Kennedy',
     age: 43,
+    alive: "1917-1963",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/John_F._Kennedy%2C_White_House_color_photo_portrait.jpg',
     maps: [
@@ -391,6 +426,7 @@ const presidents = [
     years: '1963-1969',
     name: 'Lyndon B. Johnson',
     age: 55,
+    alive: "1908-1973",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/37_Lyndon_Johnson_3x4.jpg',
     maps: [
@@ -402,6 +438,7 @@ const presidents = [
     years: '1969-1974',
     name: 'Richard Nixon',
     age: 56,
+    alive: "1913-1994",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Richard_Nixon_presidential_portrait_%281%29.jpg',
     maps: [
@@ -414,6 +451,7 @@ const presidents = [
     years: '1974-1977',
     name: 'Gerald Ford',
     age: 61,
+    alive: "1913-2006",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Gerald_Ford_presidential_portrait_%28cropped_3%29.jpg',
     info: 'Gerald Ford served as the 38th President of the United States from 1974 to 1977. He became president following the resignation of Richard Nixon, becoming the only person in U.S. history to serve as both vice president and president without being elected to either office. His presidency was marked by efforts to heal the country after the Watergate scandal and the Vietnam War. Ford also played a significant role in U.S. foreign policy, including signing the Helsinki Accords and strengthening relations with the Soviet Union. However, his time in office was also marked by economic difficulties, including high inflation and unemployment. Ford is also known for his controversial decision to pardon Nixon for his involvement in the Watergate scandal, a move that was criticized by many at the time.'
@@ -422,6 +460,7 @@ const presidents = [
     years: '1977-1981',
     name: 'Jimmy Carter',
     age: 52,
+    alive: "1924-2025",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/JimmyCarterPortrait2.jpg',
     maps: [
@@ -433,6 +472,7 @@ const presidents = [
     years: '1981-1989',
     name: 'Ronald Reagan',
     age: 69,
+    alive: "1911-2004",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/1/16/Official_Portrait_of_President_Reagan_1981.jpg',
     maps: [
@@ -445,6 +485,7 @@ const presidents = [
     years: '1989-1993',
     name: 'George H. W. Bush',
     age: 64,
+    alive: "1924-2018",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/George_H._W._Bush_presidential_portrait_%28cropped%29.jpg',
     maps: [
@@ -456,6 +497,7 @@ const presidents = [
     years: '1993-2001',
     name: 'Bill Clinton',
     age: 46,
+    alive: "1946-",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg',
     maps: [
@@ -468,6 +510,7 @@ const presidents = [
     years: '2001-2009',
     name: 'George W. Bush',
     age: 54,
+    alive: "1946-",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/George-W-Bush.jpeg',
     maps: [
@@ -480,6 +523,7 @@ const presidents = [
     years: '2009-2017',
     name: 'Barack Obama',
     age: 47,
+    alive: "1961-",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Official_portrait_of_Barack_Obama.jpg',
     maps: [
@@ -492,6 +536,7 @@ const presidents = [
     years: '2017-2021',
     name: 'Donald Trump',
     age: 70,
+    alive: "1946-",
     party: 'Republican',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg',
     maps: [
@@ -503,6 +548,7 @@ const presidents = [
     years: '2021-present',
     name: 'Joe Biden',
     age: 78,
+    alive: "1942-",
     party: 'Democratic',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/6/68/Joe_Biden_presidential_portrait.jpg',
     maps: [

@@ -1,64 +1,106 @@
 body {
-    display: flex;
     background-color: black;
+    color: white;
 }
 
-td {
-    padding: 10px;
-    background-color: rgba(128,128,128,.25);
+html, body {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    overflow: hidden;
 }
 
-#leftSide {
-    width: 60%;
-    flex: 0 0 auto;
-    margin-right: 10px;
+th, td {
+    text-align: left;
+    padding-right: 10px;
 }
 
-#rightSide {
-    width: 40%;    
-}
-
-#photo {
-    width: 100%;    
-}
-
-.controls {
+p {
     margin-top: 5px;
-    display: flex;
-}
-
-.controls * {
-    font-size: 20px;
-    color: antiquewhite;
-    background-color: black;
-    border-color: #333333;
-}
-
-.controls button {
-    border: 1px solid #333333;
-}
-
-#info, #spouse, td {
+    margin-bottom: 5px;
     font-size: x-large;
     color: antiquewhite;
 }
 
-h1 {
+.highlight {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.media {
+    color: yellow;
+    cursor: pointer;
+}
+
+#container {
+    display: flex;
+    height: 100%;
+}
+
+#mainTable {
+    overflow-y: auto;
+    flex: 0 0 auto;
+}
+
+#mainTable th {
+    cursor: pointer;
+    font-size: x-large;
     color: antiquewhite;
 }
 
-#media {
-    padding-left: 15px;
+#mainTable table td:first-child {
+    text-align: right;
+}
+
+#infoTable {
+    margin-left: -5px;
+}
+
+#infoTable th, #infoTable td {
+    font-size: x-large;
+    color: antiquewhite;
+}
+
+#images {
+    display: flex;
+    overflow-y: auto;
+}
+
+#portrait {
+    display: contents;
+}
+
+#portrait img {
+    max-width: 50%;
+    max-height: fit-content;
 }
 
 #maps {
-    padding-top: 15px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-a {
-  color: #007bff; /* Unclicked color */
+#maps img {
+    width: 100%;
 }
 
-a:visited {
-  color: #aa77dd; /* Clicked color */
+#maps img:not(:first-of-type) {
+    padding-top: 10px;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+#version {
+    position: absolute;
+    padding-right: 10px;
+    top: 5px;
+    right: 5px;
+    font-size: small;
+    color: bisque;
 }

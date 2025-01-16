@@ -1,132 +1,140 @@
-/**
- *  https://www.270towin.com/historical-presidential-elections/
-**/
+/*
+ 
+Author: Cliff Hewitt
+Info:   https://www.270towin.com/historical-presidential-elections/
 
-let currentPrez = 0;
-const prezStore = 'prezStore';
+18-Jul-2024  Inception
+15-Jan-2025  Look and feel redesign
+
+*/
+
+const MAIN_TBL = "#mainTable";
+const INFO_TBL = "#infoTable";
+const HIGHLIGHT = "highlight";
+const MEDIA = "media";
 
 function init() {
-    $("#next").click(function () {
-        next();
-    });
-    $("#previous").click(function () {
-        previous();
-    });
+    initTable();
 
-    $(document).keydown(function (event) {
-        if (document.activeElement != $('#select')[0]) {
-            if (event.which == 37) {
-                previous();
-            } else if (event.which == 39) {
-                next();
-            }
-        }
+    $(document).click(event => {
+        click(event);
     });
-
-    $('#links a').click(function(event) {
-        event.preventDefault(); // Prevent default link behavior
-        var url = $(this).attr('href');
-        window.open(url, '_blank');
-    });
-
-    currentPrez = Number(localStorage.getItem(prezStore));
-    
-    initPicklist();
 }
 
-function show() {
-    var prez = presidents[currentPrez];
-    var txt =  prez.name + " (#" + (currentPrez + 1) + ")";
-    localStorage.setItem(prezStore, currentPrez);
-    document.title = txt;
-    $('#title').text(txt);
-    var select = $('#select');
-    select.val(prez.name);
-    $('#term').text(prez.years);
-    $('#age').text(prez.age);
-    $('#party').text(prez.party);
-    $('#info').text(prez.info ? prez.info : '');
-    $('#spouse').text(prez.spouse ? prez.spouse : '');
-    var $wiki = $('#wiki');
-    $wiki.attr('href', 'https://en.wikipedia.org/wiki/' + prez.name.replaceAll(' ','_'));
-    var $media = $('#media');
-    $media.removeAttr('href');
-    if (prez.media) {
-        $media.show();
-        $media.attr('href', prez.media);
-    }
-    else {
-        $media.hide();
-    }
-    displayPhoto(prez);
-    displayMaps(prez);
-}
+function click(event) {
+    const $target = $(event.target);
 
-function displayMaps(prez) {
-    let $maps = $('#maps');
-    $maps.empty();
-    if (prez.maps && prez.maps.length > 0) {
-        for (var i = 0; i < prez.maps.length; i++) {
-            let $image = $('<img>');
-            $image.attr('src', prez.maps[i]);
-            $maps.append($image);
+    if ($target.hasClass(HIGHLIGHT)) {
+        const name = $target.text();
+        const url = "https://en.wikipedia.org/wiki/" + name.replaceAll(' ','_');
+        window.open(url, "_blank");
+    }
+    else if ($target.hasClass(MEDIA)) {
+        let url;
+        const name = $("." + HIGHLIGHT).text();
+        const president = presidents.find(d => d.name === name);
+        if (president && president.media) {
+            window.open(president.media, "_blank");
         }
     }
 }
 
-function displayPhoto(prez) {
-    var photo = $('#photo');
-    photo.removeAttr('src');
+function initTable() {
+    const $mainTbl = $(MAIN_TBL);
+    const $table = $("<table>");
+    const $thead = $("<thead>");
+    const $tbody = $("<tbody>");
+    const $headerRow = $("<tr>");
 
-    if (prez.photo) {
-        setTimeout(function() {
-            photo.attr('src', prez.photo);
-        }, 0);
-    }
-}
+    $headerRow.append($("<th>").text(""));
+    $headerRow.append($("<th>").text("President"));
+    $thead.append($headerRow);
+    $table.append($thead);
 
-function next() {
-    currentPrez++;
-    if (currentPrez >= presidents.length) {
-        currentPrez = 0;
-    }
-console.log(currentPrez);
-    show();
-}
+    for (let i = 0; i < presidents.length; i++) {
+        const president = presidents[i];
+        const $row = $("<tr>");
+        const $name = $("<td>");
+        $row.append($("<td>").text(i + 1));
+        $name.text(president.name);
+        $name.attr("title", "Click for more info");
+        $row.append($name);
+        $tbody.append($row);
 
-function previous() {
-    currentPrez--;
-    if (currentPrez < 0) {
-        currentPrez = presidents.length - 1;
-    }
-    show();
-}
-
-function initPicklist() {
-    var self = this;
-    var select = $('#select');
-
-    for (var i = 0; i < presidents.length; i++) {
-        var name = presidents[i].name;
-        var option = document.createElement('option');
-        option.setAttribute('value', name);
-        option.appendChild(document.createTextNode(name));
-        select.append(option);
-    }
-
-    select.change(function (event) {
-        setPrez(event.target.value);
-        show();
-    });
-}
-
-function setPrez(name) {
-    if (name) {
-        for (var i = 0; i < presidents.length; i++) {
-            if (presidents[i].name.includes(name)) {
-                currentPrez = i;
-                break;
-            }
+        if (president.media) {
+            $name.css("color", "yellow");
         }
+    };
+
+    $table.append($tbody);
+    $mainTbl.append($table);
+
+    $('tbody tr td:last-child').hover(
+        function() {
+            hover($(this));
+        }
+    );
+}
+
+function hover($this) {
+    $("." + HIGHLIGHT).removeClass(HIGHLIGHT);
+    $this.addClass(HIGHLIGHT);
+    showPresident(Number($this.parent().find("td:first-child").text()) - 1);
+}
+
+function showPresident(index) {
+    const president = presidents[index];
+    const $infoTbl = $(INFO_TBL);
+    const $infoTxt = $("#infoText");
+    const $images = $("#images");
+    const $table = $("<table>");
+    const $thead = $("<thead>");
+    const $tbody = $("<tbody>");
+    const $headerRow = $("<tr>");
+    const headers = ["Term", "Age", "Alive", "Party", ""];
+    const media = $("<div class='media'>");
+    if (president.media) {
+        media.html("&#x266B;");
+        media.attr("title", "Click for media play");
     }
+    const columns = [president.years, president.age, president.alive || "", president.party, media];
+
+    headers.forEach(header => {
+        $headerRow.append($("<th>").text(header));
+    });
+    $thead.append($headerRow);
+    $table.append($thead);
+    const $row = $("<tr>");
+
+    for (let i = 0; i < columns.length; i++) {
+        $row.append($("<td>").html(columns[i]));
+    }
+
+    let info = president.info;
+    if (president.spouse) {
+        info += "<br><br>" + president.spouse;
+    }
+
+    $tbody.append($row);
+    $table.append($tbody);
+    $infoTbl.empty();
+    $images.empty();
+    $infoTbl.append($table);
+    $infoTxt.html(info);
+
+    const $portrait = $("<div id='portrait'>");
+    const $maps = $("<div id='maps'>");
+    let $img = $("<img>").attr("src", president.photo);
+    $portrait.append($img);
+    $images.append($portrait);
+    $images.append($maps);
+
+    if (president.maps) {
+        president.maps.forEach(map => {
+            $img = $("<img>").attr("src", map);
+            $maps.append($img);
+        });
+    }
+
+    document.title = president.name + " (#" + (index + 1) + ")";
 }
