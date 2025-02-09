@@ -191,7 +191,8 @@ const presidents = [
         'https://www.270towin.com/historical_maps/1860_large.png',
         'https://www.270towin.com/historical_maps/1864_large.png'
     ],
-    info: 'Abraham Lincoln, the 16th President of the United States, is widely regarded as one of the nation\'s greatest leaders. He is best known for his leadership during the American Civil War, during which he successfully preserved the Union and ended slavery through the Emancipation Proclamation. Lincoln was a skilled orator, delivering famous speeches like the Gettysburg Address and his Second Inaugural Address. He also played a key role in the passage of the 13th Amendment to the Constitution, which officially abolished slavery in the United States. Lincoln\'s leadership and legacy have continued to inspire generations of Americans.'
+    info: 'Abraham Lincoln, the 16th President of the United States, is widely regarded as one of the nation\'s greatest leaders. He is best known for his leadership during the American Civil War, during which he successfully preserved the Union and ended slavery through the Emancipation Proclamation. Lincoln was a skilled orator, delivering famous speeches like the Gettysburg Address and his Second Inaugural Address. He also played a key role in the passage of the 13th Amendment to the Constitution, which officially abolished slavery in the United States. Lincoln\'s leadership and legacy have continued to inspire generations of Americans.',
+    media: "https://www.youtube.com/watch?v=FryExpC-fS4"
 },
 {
     years: '1865-1869',

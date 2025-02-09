@@ -5,6 +5,7 @@ Info:   https://www.270towin.com/historical-presidential-elections/
 
 18-Jul-2024  Inception
 16-Jan-2025  Look and feel redesign.  Add next president.
+09-Feb-2025  Handle table keys Enter, ArrowDomn, ArrowUp
 
 */
 
@@ -15,19 +16,55 @@ const MEDIA = "media";
 
 function init() {
     initTable();
+    initHandlers();
+}
 
-    $(document).click(event => {
+function initHandlers() {
+    const $doc = $(document);
+
+    $doc.click(event => {
         click(event);
     });
+
+    $doc.keydown(event => {
+        keydown(event);
+    });
+}
+
+function keydown(event) {
+    const $highlight = $(MAIN_TBL + " ." + HIGHLIGHT);
+    let index = $highlight.length > 0 ? $highlight.closest("tr")[0].rowIndex - 1 : -1;
+
+    if ("Enter" === event.key && index >= 0) {
+        openWiki($highlight);
+    }
+    else if ("ArrowDown" === event.key) {
+        index++;
+        if (index >= presidents.length) {
+            index = 0;
+        }
+        highlight(index);
+    }
+    else if ("ArrowUp" === event.key) {
+        index--;
+        if (index < 0) {
+            index = presidents.length - 1;
+        }
+        highlight(index);
+    }
+}
+
+function highlight(index) {
+    const $rows = $(MAIN_TBL + " tbody tr");
+    const $td = $($rows[index]).find("td:last-child");
+    hover($td);
 }
 
 function click(event) {
     const $target = $(event.target);
 
     if ($target.hasClass(HIGHLIGHT)) {
-        const name = $target.text();
-        const url = "https://en.wikipedia.org/wiki/" + name.replaceAll(' ','_');
-        window.open(url, "_blank");
+        openWiki($target);
     }
     else if ($target.hasClass(MEDIA)) {
         let url;
@@ -37,6 +74,12 @@ function click(event) {
             window.open(president.media, "_blank");
         }
     }
+}
+
+function openWiki($target) {
+    const name = $target.text();
+    const url = "https://en.wikipedia.org/wiki/" + name.replaceAll(' ','_');
+    window.open(url, "_blank");
 }
 
 function initTable() {
@@ -69,17 +112,42 @@ function initTable() {
     $table.append($tbody);
     $mainTbl.append($table);
 
-    $('tbody tr td:last-child').hover(
+    $(MAIN_TBL + ' tbody tr td:last-child').hover(
         function() {
             hover($(this));
+        }
+    );
+
+    $(MAIN_TBL + " thead").hover(
+        function() {
+            clearHover();
         }
     );
 }
 
 function hover($this) {
-    $("." + HIGHLIGHT).removeClass(HIGHLIGHT);
-    $this.addClass(HIGHLIGHT);
-    showPresident(Number($this.parent().find("td:first-child").text()) - 1);
+    if (document.hasFocus()) {
+        $("." + HIGHLIGHT).removeClass(HIGHLIGHT);
+        $this.addClass(HIGHLIGHT);
+        showPresident(Number($this.parent().find("td:first-child").text()) - 1);
+
+        $("#focusHelper").focus(); // Redirect focus away from the scrollbar
+        $this[0].scrollIntoView({ behavior: "smooth", block: "nearest" }); // scroll to make visible
+
+        if ($this.parent()[0].rowIndex <= 1) {  // Make sure header shows when 1st row selected
+            $(MAIN_TBL + " thead")[0].scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+    }
+}
+
+function clearHover() {
+    if (document.hasFocus()) {
+        $("." + HIGHLIGHT).removeClass(HIGHLIGHT);
+        $(INFO_TBL).empty();
+        $("#infoText").empty();
+        $("#images").empty();
+        document.title = "Presidents";
+    }
 }
 
 function showPresident(index) {
